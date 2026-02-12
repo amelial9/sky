@@ -5,7 +5,7 @@
 }
 
 .section-title {
-  color: #473C35;
+  color: var(--accent-lavender);
   font-size: 1.5rem;
   margin-bottom: 2rem;
   text-align: left;
@@ -20,7 +20,7 @@
   bottom: 0;
   width: 60px;
   height: 2px;
-  background-color: #473C35;
+  background-color: var(--accent-gold);
 }
 
 .education-content {
@@ -31,7 +31,7 @@
 }
 
 .education-card {
-  background: #FAFAFC;
+  background: rgba(250, 250, 252, 0.12);
   padding: 1.2rem;
   text-align: left;
 }
@@ -42,7 +42,7 @@
 }
 
 .education-title {
-  color: #473C35;
+  color: var(--text-primary);
   font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   text-align: left;
@@ -56,7 +56,7 @@
 }
 
 .education-subtitle {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1rem;
   margin: 0;
   font-weight: 500;
@@ -64,7 +64,7 @@
 }
 
 .education-date {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
   text-align: left;
@@ -73,11 +73,11 @@
 .education-date::before {
   content: '|';
   margin: 0 0.5rem;
-  color: #473C35;
+  color: var(--accent-gold);
 }
 
 .education-details {
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.6;
   text-align: left;
 }

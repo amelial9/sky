@@ -1,0 +1,214 @@
+:root {
+  --sky-blue-deep: #222f57;
+  --sky-blue-soft: #6f93d6;
+  --sky-blue-lavender: #9fb0f1;
+  --sky-peach: #ffd6cf;
+  --sky-gold: #ffd27a;
+  --sky-white-cool: rgba(235, 245, 255, 0.7);
+  --sky-white-cool-soft: rgba(235, 245, 255, 0.52);
+}
+
+.sky-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  /* Template-style backdrop gradient (ported from src/archive/sky-portfolio copy.html) */
+  background: linear-gradient(
+    to bottom,
+    #5e6b98 0%,
+    #6975ac 25%,
+    #6f7db5 50%,
+    #6975ac 75%,
+    #62699e 100%
+  );
+}
+
+/* ---------- STARS ---------- */
+.sky-bg__stars {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.sky-bg__star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--sky-white-cool);
+  box-shadow: 0 0 12px rgba(235, 245, 255, 0.5);
+  animation: skyTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes skyTwinkle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ---------- AURORA ---------- */
+.sky-bg__aurora {
+  position: fixed;
+  width: 120%;
+  height: 50vh;
+  left: -10%;
+  top: 0;
+  z-index: 1;
+  filter: blur(30px);
+  mix-blend-mode: screen;
+  animation: skyAuroraMove 14s ease-in-out infinite;
+}
+
+.sky-bg__aurora--one {
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(195, 190, 235, 0.28),
+    rgba(165, 160, 220, 0.18),
+    transparent 70%
+  );
+}
+
+.sky-bg__aurora--two {
+  top: 8vh;
+  opacity: 0.55;
+  animation-duration: 20s;
+  background: radial-gradient(
+    circle at 70% 40%,
+    rgba(200, 198, 238, 0.22),
+    rgba(172, 168, 225, 0.16),
+    transparent 70%
+  );
+}
+
+@keyframes skyAuroraMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+}
+
+/* ---------- FOG ---------- */
+.sky-bg__fog {
+  position: fixed;
+  bottom: 0;
+  width: 120%;
+  height: 30vh;
+  left: -10%;
+  background: linear-gradient(to top, rgba(210, 208, 242, 0.16), transparent);
+  filter: blur(40px);
+  z-index: 2;
+  animation: skyFogDrift 25s linear infinite;
+}
+
+@keyframes skyFogDrift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}
+
+/* ---------- FLOATING CLOUDS ---------- */
+.sky-bg__cloud {
+  position: absolute;
+  background: var(--sky-white-cool);
+  border-radius: 999px;
+  filter: blur(20px);
+  animation: skyFloatCloud linear infinite;
+  z-index: 1;
+}
+
+.sky-bg__cloud::before,
+.sky-bg__cloud::after {
+  content: '';
+  position: absolute;
+  background: var(--sky-white-cool-soft);
+  border-radius: 999px;
+}
+
+.sky-bg__cloud::before {
+  width: 55%;
+  height: 140%;
+  left: 12%;
+  top: -70%;
+}
+
+.sky-bg__cloud::after {
+  width: 45%;
+  height: 120%;
+  right: 14%;
+  top: -60%;
+}
+
+.sky-bg__cloud--1 {
+  width: 200px;
+  height: 60px;
+  top: 20%;
+  left: -200px;
+  animation-duration: 50s;
+}
+
+.sky-bg__cloud--2 {
+  width: 150px;
+  height: 50px;
+  top: 40%;
+  left: -150px;
+  animation-duration: 60s;
+  animation-delay: 5s;
+}
+
+.sky-bg__cloud--3 {
+  width: 180px;
+  height: 55px;
+  top: 60%;
+  left: -180px;
+  animation-duration: 55s;
+  animation-delay: 10s;
+}
+
+.sky-bg__cloud--4 {
+  width: 220px;
+  height: 70px;
+  top: 15%;
+  left: -220px;
+  animation-duration: 65s;
+  animation-delay: 15s;
+}
+
+@keyframes skyFloatCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 300px));
+  }
+}
+
+/* ---------- HORIZON ---------- */
+.sky-bg__horizon {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to top, rgba(88, 90, 138, 0.22), transparent);
+  z-index: 3;
+}
+
+/* ---------- CONSTELLATION ---------- */
+.sky-bg__constellation {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
