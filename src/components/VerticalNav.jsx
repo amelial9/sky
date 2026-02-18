@@ -64,7 +64,7 @@ const VerticalNav = () => {
 
       <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
         <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-        {/* <Link to="/research" className="nav-link" onClick={() => setIsMenuOpen(false)}>Research</Link> */}
+        <a href="https://drive.google.com/file/d/13gaNyLV2URsI6XD5APgCqVhZ95dUwDlz/view" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={() => setIsMenuOpen(false)}>Resume</a>
         <a href="https://notes.ameliali.com/" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>Notes</a>
         <a href="https://ameli9.notion.site/amelia-23e5d09895ac8047a604fff42e6527d5" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>/amelia</a>
       </div>

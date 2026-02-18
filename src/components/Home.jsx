@@ -5,6 +5,7 @@ import Experiences from './experiences/Experiences';
 import VerticalNav from './VerticalNav';
 import Projects from './projects/Projects';
 import HomeResearch from './HomeResearch';
+import Skills from './Skills';
 
 function Home() {
   return (
@@ -82,6 +83,14 @@ function Home() {
 
         <section id="projects">
           <Projects />
+        </section>
+
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <section id="skills">
+          <Skills />
         </section>
 
         <br></br>
