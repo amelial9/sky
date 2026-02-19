@@ -78,6 +78,36 @@ nav {
   color: var(--text-secondary);
   margin-left: 0;
 }
+
+.title-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.title-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.title-link-btn:hover {
+  background: var(--accent-lavender);
+  color: #1a1a2e;
+  transform: scale(1.08);
+}
+
+.title-link-btn:focus {
+  outline: 2px solid var(--accent-lavender);
+  outline-offset: 2px;
+}
  .introContainer .sec1 {
   flex: 2;
 }
@@ -172,5 +202,9 @@ nav {
 
   .tagline {
     text-align: center;
+  }
+
+  .title-links {
+    justify-content: center;
   }
 }
